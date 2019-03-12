@@ -89,10 +89,10 @@ def main():
     said_comment_tagger = SaidCommentTagger()
     verb_tagger = VerbTagger(args.verb_path)
     sentiment_detectror = SentimentDetector()
-    # character_detector = CharacterDetector()
+    character_detector = CharacterDetector()
     
     pipeline = Pipeline(reader, quotes_adapter, speech_detector, 
-                        said_comment_tagger, verb_tagger, sentiment_detectror)  #, character_detector)
+                        said_comment_tagger, verb_tagger, sentiment_detectror , character_detector)
 
     list_of_textfiles = [args.text_path] if args.directory_path is None else _get_list_of_text_files(args.directory_path)
 
